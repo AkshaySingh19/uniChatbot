@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+myvenv/
+venv/
+.env/
+.env
+
+# ChromaDB
+chroma_db/
+chroma/
+.chromadb/
+data/
+db/
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# IDE / Editor
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
