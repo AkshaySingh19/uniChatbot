@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from langchain_community.document_loaders.recursive_url_loader import RecursiveUrlLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from bs4 import BeautifulSoup
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -70,7 +70,7 @@ def get_rag_chain():
         search_kwargs={"k": 4, "fetch_k": 20}
     )
     
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+    llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
     contextualize_q_system_prompt = (
         "Given a chat history and the latest user question "
